@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+    <div class="container">
+        <h2>Coding Dojo Survey Form</h2>
+        <form action="/process" method="POST">
+            {% csrf_token %}
+            <div class="form-group col-md-6">
+                <label for="inputFirstName" class="col-form-label">First Name</label>
+                <input type="text" class="form-control" id="inputFirstName" name="html_first" placeholder="First Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputLastName" class="col-form-label">Last Name</label>
+                <input type="text" class="form-control" id="inputLastName" name="html_last" placeholder="Last Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputLocation" class="col-form-label">Dojo Location</label>
+                <select id="inputLocation" class="form-control" name="html_location">Choose
+                    <option value="Silicon Valley">Silicon Valley</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Bellevue">Bellevue</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputFavLanguage" class="col-form-label">Favorite Language</label>
+                <select id="inputFavLanguage" class="form-control" name="html_favorite">Choose
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputComments">Comments:</label>
+                <textarea class="form-control" id="inputComments" name="html_comments" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Form</button>
+          </form>
+    </div>
+    </body>
+</html>

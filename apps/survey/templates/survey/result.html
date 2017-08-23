@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <title>Survey Result</title>
+    </head>
+    <body>
+    <div class="container">
+        <h2>Thank you for submitting the form!!!</h2>
+        <h4>Please see below for form data</h4>
+        <ul>
+            <li>First Name: {{ request.session.first }}</li>
+            <li>Last Name: {{ request.session.last }}</li>
+            <li>Dojo Location: {{ request.session.location }}</li>
+            <li>Favorite Language: {{ request.session.favorite }} </li>
+            <li>Comments: {{ request.session.comments }}</li>
+        </ul> 
+    </div>
+    </body>
+</html>
